@@ -1,0 +1,10 @@
+- checkAPI
+- checkRSS
+- checkFTP
+- checkIDs?
+- processDir
+- processZip
+- downloadHTTP
+- downloadFTP
+- loadFile
+- sendAlert
