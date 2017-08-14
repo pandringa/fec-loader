@@ -21,8 +21,16 @@
     "through2": "^2.0.3",
     "yauzl": "^2.4.2"
   },
-  "scripts": {
-    "start": "node --max-old-space-size=4000 ./src/util/fec/rss"
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
   },
-  "main": "./index"
+  "scripts": {
+    "start": "node --max-old-space-size=4000 ./src/util/fec/rss",
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "main": "./index",
+  "bin": {
+    "fecloader": "./bin/fecloader"
+  }
 }

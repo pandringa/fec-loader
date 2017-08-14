@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+var program = require('commander'),
+    pkg = require('../package.json'),
+    loader = require('../');
+
+program
+    .version(pkg.version);
+
+/*
+hmmm
+
+program
+    .usage('<filings path> <data path>')
+    .action((filingsPath, dataPath, options) => {
+        console.log('file,lines');
+
+        _(parser(filingsPath))
+            .flatten()
+            .flatMap(filing => _(filing.save(dataPath)) )
+            .each(filing => console.log('"' + filing.file + '",' + filing.count))
+            .done(() => {});
+    });*/
+
+program.parse(process.argv);
+
+if (!process.argv.slice(2).length) {
+    program.outputHelp();
+}
