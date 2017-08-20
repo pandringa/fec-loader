@@ -19,7 +19,9 @@ describe('lib/queue.js', () => {
     });
 
     it('should repeat every 2 seconds', function(done) {
-        queue = new Queue('test',(task,done) => {
+        queue = new Queue('test');
+
+        queue.process((task,done) => {
             done();
         });
 
@@ -29,7 +31,7 @@ describe('lib/queue.js', () => {
         let nextTick = 2 * ONE_SECOND + 500;
 
         queue
-            .push(
+            .add(
                 { foo: 'bar' },
                 { repeat: { cron: '*/2 * * * * *' } }
             )
