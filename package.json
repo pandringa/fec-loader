@@ -20,6 +20,7 @@
     "progress-stream": "^1.2.0",
     "rss-parser": "^2.5.2",
     "through2": "^2.0.3",
+    "vinyl-fs": "^2.4.4",
     "yauzl": "^2.4.2"
   },
   "devDependencies": {
